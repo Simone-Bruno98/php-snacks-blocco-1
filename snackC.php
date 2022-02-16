@@ -16,7 +16,7 @@ $nItems = "15";
 
 
 function numeriCasuali ($min, $max, $nItems){
-        $arrNumeriCasuali = [1,2,3];
+        $arrNumeriCasuali = [];
 
         while (count($arrNumeriCasuali) < $nItems){
             $numero = rand($min, $max);
