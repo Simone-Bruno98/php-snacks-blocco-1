@@ -11,24 +11,21 @@
 <?php
 
 $min = "1";
-$max = "50";
+$max = "100";
 $nItems = "15";
 
 
-function numeriCasuali ($min, $max, $nItems){
-        $arrNumeriCasuali = [];
+$arrNumeriCasuali = [];
 
-        while (count($arrNumeriCasuali) < $nItems){
-            $numero = rand($min, $max);
-            if(!in_array($numero,$arrNumeriCasuali)) {
-                $arrNumeriCasuali[] = $numero;
-            }
-        }
-
-        return $arrNumeriCasuali;
+while (count($arrNumeriCasuali) < $nItems){
+    $numero = rand($min, $max);
+    if(!in_array($numero,$arrNumeriCasuali)) {
+        echo $arrNumeriCasuali[] .= $numero . "<br>";
     }
+}
 
-    echo "<h1>". $arrNumeriCasuali . "</h1>";
+
+    // echo "<h1>". $arrNumeriCasuali . "</h1>";
 ?>
 </body>
 </html>
