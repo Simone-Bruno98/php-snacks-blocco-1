@@ -8,5 +8,27 @@
 </head>
 <body>
 <!-- Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
+<?php
+
+$min = "1";
+$max = "50";
+$nItems = "15";
+
+
+function numeriCasuali ($min, $max, $nItems){
+        $arrNumeriCasuali = [1,2,3];
+
+        while (count($arrNumeriCasuali) < $nItems){
+            $numero = rand($min, $max);
+            if(!in_array($numero,$arrNumeriCasuali)) {
+                $arrNumeriCasuali[] = $numero;
+            }
+        }
+
+        return $arrNumeriCasuali;
+    }
+
+    echo "<h1>". $arrNumeriCasuali . "</h1>";
+?>
 </body>
 </html>
